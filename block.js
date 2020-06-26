@@ -25,9 +25,17 @@ class Block {
   	// 
   	generateHash() {
       	// Use this to create a temporary reference of the class object
-      	let self = this;
+        let self = this;
         //Implement your code here
-        
+        return new Promise(function(resolve, reject) { 
+          self.hash = SHA256(JSON.stringify(self)).toString();
+          if (self.hash) {
+            resolve(self.hash);
+          }
+          else {
+            reject(Error("It broke"));
+          }
+        });
     }
 }
 

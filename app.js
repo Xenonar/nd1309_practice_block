@@ -17,7 +17,7 @@ block.generateHash().then((result) => {
 
 /**
  * Step 3: Run the application in node.js
- * 
+ * when the text in Block change = hash change
  */
 
 // From the terminal: cd into Project folder
